@@ -16,7 +16,9 @@
           <li><a href="#cap3">Capítulo 3: Exemplo Prático</a></li>
           <li><a href="#cap4">Capítulo 4: Git vs GitHub</a></li>
           <li><a href="#cap5">Capítulo 5: Comandos Básicos do Git</a></li>
-          <li><a href="#cap6">Capítulo 6: Resumo</a></li>
+          <li><a href="#cap6">Capítulo 6: Removendo Arquivos no Git</a></li>
+          <li><a href="#cap7">Capítulo 7: Comandos Avançados do Git</a></li>
+          <li><a href="#cap8">Capítulo 8: Resumo</a></li>
         </ul>
       </nav>
 
@@ -125,7 +127,67 @@ git pull      # Puxa as últimas alterações do repositório remoto</code></pre
         </section>
 
         <section id="cap6" class="chapter">
-          <h2>Capítulo 6: Resumo</h2>
+          <h2>Capítulo 6: Removendo Arquivos no Git</h2>
+          <p>
+            Para remover um arquivo no Git, depende do que você quer fazer com
+            ele. Aqui vão os cenários mais comuns, com exemplos práticos 👇
+          </p>
+
+          <h3>🔴 1. Remover o arquivo do Git e do computador</h3>
+          <p>Use quando você quer apagar o arquivo de vez.</p>
+          <pre><code>git rm nome-do-arquivo.ext
+git commit -m "Remove arquivo nome-do-arquivo"</code></pre>
+          <p><strong>📌 O arquivo:</strong></p>
+          <ul>
+            <li>Some da pasta</li>
+            <li>É removido do versionamento</li>
+            <li>A remoção fica registrada no histórico</li>
+          </ul>
+
+          <h3>🟡 2. Remover do Git, mas manter no computador</h3>
+          <p>Muito usado para arquivos sensíveis (.env, config.json, etc.).</p>
+          <pre><code>git rm --cached nome-do-arquivo.ext
+git commit -m "Remove arquivo do versionamento"</code></pre>
+          <p><strong>📌 O arquivo:</strong></p>
+          <ul>
+            <li>Continua no seu PC</li>
+            <li>Deixa de ser versionado</li>
+          </ul>
+          <p>👉 Normalmente você combina isso com o .gitignore.</p>
+
+          <h3>🟢 3. Remover uma pasta inteira</h3>
+          <pre><code>git rm -r nome-da-pasta/
+git commit -m "Remove pasta nome-da-pasta"</code></pre>
+
+          <h3>🔵 4. Arquivo ainda não commitado</h3>
+          <p>Se o arquivo nunca foi commitado:</p>
+          <pre><code>rm nome-do-arquivo.ext</code></pre>
+          <p>ou no Windows:</p>
+          <pre><code>del nome-do-arquivo.ext</code></pre>
+
+          <h3>⚠️ 5. Arquivo já foi enviado para o GitHub</h3>
+          <p>Depois de remover e commitar, envie a alteração:</p>
+          <pre><code>git push</code></pre>
+
+          <h3>🔎 Verificação</h3>
+          <pre><code>git status</code></pre>
+          <p>Isso confirma se o arquivo foi removido corretamente.</p>
+
+          <h3>🧠 Resumo rápido</h3>
+          <dl>
+            <dt><strong>Apagar do Git e do PC:</strong></dt>
+            <dd>git rm arquivo</dd>
+            <dt><strong>Apagar só do Git:</strong></dt>
+            <dd>git rm --cached arquivo</dd>
+            <dt><strong>Apagar pasta:</strong></dt>
+            <dd>git rm -r pasta</dd>
+            <dt><strong>Nunca commitado:</strong></dt>
+            <dd>rm arquivo</dd>
+          </dl>
+        </section>
+
+        <section id="cap7" class="chapter">
+          <h2>Capítulo 7: Resumo</h2>
           <p>
             <strong>Git é essencial para qualquer desenvolvedor,</strong> pois
             garante controle, segurança e organização no desenvolvimento de
