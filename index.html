@@ -1,18 +1,139 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Curso de Git & GitHub</title>
-</head>
-<body>
-  <h1>Bem-vindo ao Curso de Git & GitHub</h1>
-  <p>Este curso irá guiá-lo através dos conceitos básicos e avançados do Git e GitHub.</p>
-  <div class="dicas de comandos do git">
-    <h2>Dicas Importantes do Git</h2>
-    <p>Vai aumentar sua produtividade com mas rapidez</p>
-  </div>
-  <script src="js/script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>E-book: Curso de Git & GitHub</title>
+  </head>
+  <body>
+    <div class="ebook-container">
+      <nav class="toc">
+        <h2>Sumário</h2>
+        <ul>
+          <li><a href="#cap1">Capítulo 1: Introdução ao Git</a></li>
+          <li><a href="#cap2">Capítulo 2: Para que Serve o Git?</a></li>
+          <li><a href="#cap3">Capítulo 3: Exemplo Prático</a></li>
+          <li><a href="#cap4">Capítulo 4: Git vs GitHub</a></li>
+          <li><a href="#cap5">Capítulo 5: Comandos Básicos do Git</a></li>
+          <li><a href="#cap6">Capítulo 6: Resumo</a></li>
+        </ul>
+      </nav>
+
+      <main class="content">
+        <header class="ebook-header">
+          <h1>E-book: Curso de Git & GitHub</h1>
+          <p>
+            Um guia profissional e educativo para dominar o controle de versão.
+          </p>
+        </header>
+
+        <section id="cap1" class="chapter">
+          <h2>Capítulo 1: Introdução ao Git</h2>
+          <p>
+            Este e-book irá guiá-lo através dos conceitos básicos e avançados do
+            Git e GitHub.
+          </p>
+          <p>
+            <strong>O que é Git?</strong> É um sistema de controle de versão
+            distribuído. Ele serve para registrar, organizar e gerenciar
+            alterações em arquivos, principalmente código-fonte, ao longo do
+            tempo.
+          </p>
+          <p>
+            Em termos simples: o Git permite que você salve versões do seu
+            projeto, volte no tempo quando algo dá errado e trabalhe em equipe
+            sem bagunçar o código.
+          </p>
+        </section>
+
+        <section id="cap2" class="chapter">
+          <h2>Capítulo 2: Para que Serve o Git?</h2>
+          <h3>1. Controle de Versões</h3>
+          <ul>
+            <li>Guarda o <strong>histórico completo</strong> do projeto.</li>
+            <li>Permite voltar para versões anteriores.</li>
+            <li>Mostra <strong>quem alterou o quê e quando.</strong></li>
+          </ul>
+          <h3>2. Trabalho em Equipe</h3>
+          <ul>
+            <li>Várias pessoas podem trabalhar no mesmo projeto.</li>
+            <li>Cada desenvolvedor trabalha em sua própria cópia.</li>
+            <li>
+              O Git <strong>mescla</strong> as alterações de forma segura.
+            </li>
+          </ul>
+          <h3>3. Organização do Desenvolvimento</h3>
+          <ul>
+            <li>
+              Uso de <strong>branches</strong> (ramificações) para novas
+              funcionalidades.
+            </li>
+            <li>Testes e experimentos sem afetar o código principal.</li>
+            <li>Correções isoladas de bugs.</li>
+          </ul>
+          <h3>4. Segurança do Código</h3>
+          <ul>
+            <li>Evita perda de código.</li>
+            <li>Cada desenvolvedor tem uma cópia completa do projeto.</li>
+            <li>Fácil recuperação em caso de erro.</li>
+          </ul>
+        </section>
+
+        <section id="cap3" class="chapter">
+          <h2>Capítulo 3: Exemplo Prático</h2>
+          <p>Imagine que você está desenvolvendo um site:</p>
+          <ul>
+            <li>Fez uma alteração → <strong>Git salva</strong></li>
+            <li>Algo quebrou → <strong>Git restaura</strong></li>
+            <li>
+              Um colega altera outro arquivo → <strong>Git junta tudo</strong>
+            </li>
+          </ul>
+        </section>
+
+        <section id="cap4" class="chapter">
+          <h2>Capítulo 4: Git vs GitHub</h2>
+          <p><strong>Git</strong> é a ferramenta (instalada no computador).</p>
+          <p>
+            <strong>GitHub / GitLab / GitBucket</strong> são plataformas online
+            que hospedam repositórios Git.
+          </p>
+          <p>
+            No seu caso, por exemplo, quando você cria um repositório no
+            <strong>GitHub,</strong> você está usando o Git para versionar o
+            código e o <strong>GitHub</strong> para armazená-lo na nuvem.
+          </p>
+        </section>
+
+        <section id="cap5" class="chapter">
+          <h2>Capítulo 5: Comandos Básicos do Git</h2>
+          <p>No terminal Bash:</p>
+          <pre><code>git init      # Inicia um repositório Git
+git status    # Verifica o status dos arquivos
+git rm arquivo  # Remove um arquivo do repositório
+git mv arquivo-antigo arquivo-novo  # Renomeia um arquivo
+git add .     # Adiciona arquivos para o próximo commit
+git commit -m "Mensagem"  # Salva as alterações com uma mensagem
+git log       # Mostra o histórico de commits
+git branch    # Lista as branches (ramificações)
+git checkout nome-da-branch  # Muda para outra branch
+git merge nome-da-branch  # Mescla outra branch na atual
+git remote add origin URL-do-repositório  # Conecta ao repositório remoto
+git push -u origin main  # Envia as alterações para o repositório remoto
+git pull      # Puxa as últimas alterações do repositório remoto</code></pre>
+        </section>
+
+        <section id="cap6" class="chapter">
+          <h2>Capítulo 6: Resumo</h2>
+          <p>
+            <strong>Git é essencial para qualquer desenvolvedor,</strong> pois
+            garante controle, segurança e organização no desenvolvimento de
+            software.
+          </p>
+        </section>
+      </main>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
 </html>
